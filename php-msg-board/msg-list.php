@@ -19,7 +19,7 @@ echo "</ul>";
 
 
 
-echo '<a href="index.html">返回</a>';
+echo '<a href="./index.html">返回</a>';
 
 
 
