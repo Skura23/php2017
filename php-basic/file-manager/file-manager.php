@@ -3,14 +3,24 @@
 $path = './';
 $url = $_SERVER['REQUEST_URI'];
 
+$pathLen = strlen(realpath($path));
+
+//获取真实初始根路径
+define(PATH_LEN,strlen(realpath($path)));
+
 if(isset($_GET['dir'])){
 	$path = $path.'/'.$_GET['dir'];
 }else{
-	$url = $url . '?dir=./';
+	$url = $url . '?dir=.';
 }
 
+//访问超出根路径时禁止 
+if(strlen(realpath($path)) <PATH_LEN){
+	echo "<h2>无法访问</h2?";
+	exit;
+}
+echo strlen(realpath($path));
 
- 
 $dh = opendir($path);  
 if($dh === false){
 	echo 'error';
@@ -59,7 +69,7 @@ closedir($dh);
 			'<td>',$key,'</td>',
 			'<td>',$value,'</td>';
 		echo "<td>";
-		if(is_dir($path.'./'.$value)) {
+		if(is_dir($path.'/'.$value)) {
 				echo "<a href='",$url."/".$value."'>浏览</a>";} 
 				else{echo "<a href='./".$_GET['dir']."/".$value."'>查看</a>";}
 		echo '</td></tr>';
