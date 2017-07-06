@@ -20,7 +20,7 @@ $_res = mysql_fetch_assoc($res);
 echo "<h2>".$_res['id'].'. '.$_res['title']."</h2>",
 	 "<p>".$_res['content'].'. '."</p>";
  
-echo '<a href="index.html">返回</a>';
+echo '<a href="../index.html">返回</a>';
 
 
 
