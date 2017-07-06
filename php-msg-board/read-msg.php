@@ -2,6 +2,7 @@
 
 //连接mysql
 $re = mysql_connect('127.0.0.1','root','');
+var_dump($re);
 
 //发送查询。query用于建立通道传递信息，相当于拨电话
 mysql_query('use test',$re);

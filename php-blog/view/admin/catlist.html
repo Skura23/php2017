@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>栏目列表</title>
+</head>
+<body>
+	<?php include 'public_side.html' ?>
+	<table class="cat-list">
+		<thead>
+			<tr>
+				<td>序号</td>
+				<td>栏目名称</td>
+				<td>XXX</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach($cat as $v){ ?>
+			<tr>
+				<td><?php echo $v['cat_id'] ?></td>
+				<td><?php echo $v['catname'] ?></td>
+				<td><?php echo $v['num'] ?></td>
+				<td>
+					<a href="catdel.php?cat_id=<?php echo $v['cat_id'] ?>">删除</a> |
+					<a href="catedit.php?cat_id=<?php echo $v['cat_id'] ?>">编辑</a>
+				</td>
+			</tr>
+		<?php } ?>
+		</tbody>
+	</table>
+</body>
+</html>
