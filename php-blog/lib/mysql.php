@@ -34,8 +34,8 @@ function mQuery($sql){
 * @param str $str 待记录的字符串
 */
 function mLog($str){
-	$filename = ROOT . '/log/' . date('Ymd') . '.txt';
-	$log = "==========================================\n".date('Y/m/d H:i:s')."\n".$str.
+	$filename = ROOT . '/log/' . gmdate('Ymd') . '.txt';
+	$log = "==========================================\n".gmdate('Y/m/d H:i:s')."\n".$str.
 	"\n"."==========================================\n";
 	file_put_contents($filename, $log, FILE_APPEND);
 }

@@ -5,7 +5,7 @@ require('./lib/init.php');
 if (empty($_POST)) {
 	$sql = "select * from cat";
 	$rs = mGetAll($sql);
-	print_r($rs);
+	/*print_r($rs);*/
 	include ROOT.'/view/admin/artadd.html';
 }else{
 	//检测标题是否为空
@@ -19,7 +19,7 @@ if (empty($_POST)) {
 	if (empty($art['content'])) {
 		error('正文不能为空');
 	}
-	var_dump(mExec('art', $art));
+	/*var_dump(mExec('art', $art));*/
 	succ('文章添加成功');
 }	
  
