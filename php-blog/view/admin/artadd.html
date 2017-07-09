@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加文章</title>
+	<style>
+	section{
+		display: block;
+		margin-top: 10px;
+	}
+	button{
+		margin-top: 10px;
+	}
+	section .c{
+		vertical-align: top;
+	}
+	section span{
+		display: inline-block;
+		width: 60px;
+
+	}
+	section input{
+		width: 229px;
+	}
+	</style>
+</head>
+<body>
+	<?php include 'public_side.html'; ?>
+	<div class="bo">
+	<form action="" method="post">
+		<section><span>标题：</span><input type="text" name="title"></section>
+		<section><span>栏目：</span><select name="cat_id" id="">
+			<?php foreach($rs as $k=>$v){
+				echo '<option value="'.$v['cat_id'].'">'.$v['catname'].'</option>';
+			} ?>
+		</select></section>
+		<section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"></textarea></section>
+		<section><span>标签：</span><input type="text" name="tag"></section>
+		<button type="submit"> 提交 </button>
+	</form>
+	</div>
+</body>
+</html>

@@ -9,7 +9,7 @@
 	<form action="" method="post">
 		<!-- name 指要传给 $_POST 的数据的键名 -->
 		<label>栏目名称：<input type="text" name="catname" 
-		value=""></label>
+		value="<?php echo $row['catname']; ?>"></label>
 		<button type="submit">提交</button>
 	</form>
 </body>

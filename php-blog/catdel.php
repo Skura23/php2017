@@ -3,7 +3,6 @@
 
 //cat_id
 $cat_id = $_GET['cat_id'];
-echo $cat_id;
 
 //连接数据库
 $conn = mysql_connect('localhost','root','');
