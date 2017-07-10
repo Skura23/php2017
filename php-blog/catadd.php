@@ -32,6 +32,8 @@ if (empty($_POST)) {
 		error($str);
 		mysql_error();
 	}else{
+		
+		
 		$str = "栏目名 ".$cat['catname']." 插入成功";
 		succ($str);
 	}

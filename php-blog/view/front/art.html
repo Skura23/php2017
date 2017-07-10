@@ -69,13 +69,22 @@
 					</div>
 					</article>
 					<div class="comments">
-						<h3>评论</h3>
-						<p>Chris</p>
-						<p class="com-time">2017.1.1 &nbsp;&nbsp;20:10</p>
-						<div>hello there</div>
+							<h2>评论</h2>
+					<?php foreach($comms as $k=>$v){ ?>
+						<div class="comment">
+							<h3><?php echo $v['nick']; ?></h3>
+							<p class="com-time"><?php echo date('Y/m/d H:i',$v['pubtime']); ?></p>
+							<div><?php echo $v['content']; ?></div>
+						</div>
+					<?php } ?>
 					</div>
 					<div class="user">
 					<form action="" method="post">
+						<h2>我要留言</h2>
+						<!-- 留言失败时出现 -->
+						<?php if(isset($rs) || $rs==false){ ?>
+						<p>* 留言发布失败</p>
+						<?php } ?>
 						<p><label><input type="text" placeholder="输入昵称" name="nick"></label></p>
 						<p><label><input type="text" placeholder="输入邮箱" name="email"></label></p>
 						<p><label><textarea placeholder="输入评论" name="content"></textarea></label></p>

@@ -10,7 +10,7 @@ if (!is_numeric($art_id)) {
 }
 
 //判断是否有这篇文章
-$sql_art = "select title,content,cat_id from art where art_id = $art_id";
+$sql_art = "select title,content,cat_id,arttag from art where art_id = $art_id";
 if(!mGetRow($sql_art)){
 	error('文章不存在');
 }
