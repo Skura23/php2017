@@ -1,0 +1,64 @@
+==========================================
+2017/07/10 12:42:57
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:42:57
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:43:34
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:43:34
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:46:03
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:46:03
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:46:47
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:46:47
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:48:49
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:48:49
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:49:43
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:49:43
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:50:00
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:50:00
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/10 12:50:07
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/10 12:50:07
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
