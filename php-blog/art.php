@@ -28,9 +28,13 @@ if (!empty($_POST)) {
 	$comm['email'] = trim($_POST['email']);
 	$comm['art_id'] = $art_id;
 	$comm['pubtime'] = time();
+	$comm['ip'] = sprintf('%u', ip2long(getRealIp()));
 /*	var_dump($comm['pubtime']);*/
 	$rs=mExec('comment',$comm);
 	if ($rs) {
+		//评论数+1
+		/*$sql = "update art set comm = comm+1 where art_id = $art_id";
+		mQuery($sql);*/
 		# code...
 		$ref = $_SERVER['HTTP_REFERER'];
 		header("Location: $ref");

@@ -33,7 +33,8 @@ if (empty($_POST)) {
 	if (empty($modidArt['content'])) {
 		error('正文不能为空');
 	}
-	$modidArt['lastup'] = gmdate('Y/m/d');
+	$modidArt['lastup'] = time();
+	$modidArt['arttag'] = trim($_POST['tag']);
 	$rs = mExec('art',$modidArt,'update', 'art_id ='.$art_id);
 	/*var_dump($rs);*/
 

@@ -32,6 +32,10 @@ if (empty($_POST)) {
 		//判断是否有tag
 		$art['tag'] = trim($_POST['tag']);
 		if ($art['tag'] =='') {
+			# cat num +1
+			$sql = "update cat set num = num+1 where cat_id = $art[cat_id]";
+			mQuery($sql);
+
 			# code...
 			succ('文章添加成功');
 		}else{
@@ -45,7 +49,7 @@ if (empty($_POST)) {
 			}
 			$sql = rtrim($sql,',');
 			/*var_dump($sql);*/
-			if (!mQuery($sql)) {
+			if (!mQuery($sql)) { 
 				# code...
 				$sql = "delete from art where art_id = $art_id";
 				if (mQuery($sql)) {
@@ -53,6 +57,9 @@ if (empty($_POST)) {
 					error('文章添加失败');
 				}
 			}else{
+				# cat num +1
+				$sql = "update cat set num = num+1 where cat_id = $art[cat_id]";
+				mQuery($sql);
 				succ('文章添加成功');
 			}
 		}

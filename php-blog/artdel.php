@@ -20,6 +20,9 @@ $sql = "delete from art where art_id = $art_id";
 if(!mQuery($sql)){
 	error('文章删除失败');
 }else{
+	# cat num -1
+	$sql = "update cat set num = num-1 where cat_id = $art[cat_id]";
+	mQuery($sql);
 	header('Location: artlist.php');
 }
 

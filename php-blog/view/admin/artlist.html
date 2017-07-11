@@ -27,11 +27,23 @@
 			echo '<td>'.$v['comm'].'</td>';
 			echo '<td>';
 			echo '<a href="artedit.php?art_id='.$v['art_id'].'">编辑</a>';
-			echo '<a href="artdel.php?art_id='.$v['art_id'].'">删除</a>';
+			echo '<a class="del" href="artdel.php?art_id='.$v['art_id'].'">删除</a>';
 			echo '</tr>';
 		}?>
 		</tbody>
 		
 	</table>
+<script>
+var del = document.getElementsByClassName('del');
+for(var i =0;i<del.length;i++){
+	del[i].onclick = function(){
+		var conf = confirm('确定删除么?');
+		if (!conf) {
+			return false;
+		}
+	}
+}
+
+</script>
 </body>
 </html>

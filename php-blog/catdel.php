@@ -39,6 +39,7 @@ if (!$rs = mysql_query($sql)) {
 	# code...
 	echo "删除失败";
 }else{
+	
 	echo "删除成功";
 }
 
