@@ -82,7 +82,7 @@
 					<form action="" method="post">
 						<h2>我要留言</h2>
 						<!-- 留言失败时出现 -->
-						<?php if(isset($rs) || $rs==false){ ?>
+						<?php if(isset($rs) && $rs==false){ ?>
 						<p>* 留言发布失败</p>
 						<?php } ?>
 						<p><label><input type="text" placeholder="输入昵称" name="nick"></label></p>
