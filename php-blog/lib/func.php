@@ -51,7 +51,7 @@ function getRealIp(){
 /*if (!isset($_GET['page'])) {
 	$_GET['page'] =1;
 }*/
-$arr = array('a','b','c','d','e','f',1,2);
+/*$arr = array('a','b','c','d','e','f',1,2);*/
 function getPage($arr,$sNum){
 	if (!isset($_GET['page'])) {
 		$_GET['page'] =1;

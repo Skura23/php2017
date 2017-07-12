@@ -41,7 +41,7 @@
 					</ul>
 				</nav>
 				<ul class="article-list">
-				<?php foreach($arts as $k=>$v){ ?>
+				<?php foreach($pDisArr as $k=>$v){ ?>
 					<li class="article-list-item appear">
 						<a href="art.php?art_id=<?php echo $v['art_id']; ?>" title="<?php echo $v['title']; ?>">
 							<h5>
@@ -71,6 +71,18 @@
 					</li>
 				<?php } ?>
 				</ul>
+				<?php foreach($pArr as $k=>$v){
+				    if($_GET['page'] == $k){ ?>
+				      <span><?php echo $k; ?></span>
+				      <?php }else{ ?>
+				  <a href="index.php?
+				  <?php
+				  	$_GET['page'] = $k;
+				  	$str = http_build_query($_GET);
+				  	echo $str;
+				   ?>
+				  "><?php echo $k; ?></a>
+				<?php } } ?>
 				<footer class="footer appear">
 					<p>
 						Chalk is a high quality, completely customizable, performant and 100% free

@@ -1054,3 +1054,1195 @@ select * from art
 2017/07/12 07:14:30
 select * from cat
 ==========================================
+==========================================
+2017/07/12 14:51:54
+select * from art
+==========================================
+==========================================
+2017/07/12 14:51:54
+select * from art
+==========================================
+==========================================
+2017/07/12 14:51:54
+select * from cat
+==========================================
+==========================================
+2017/07/12 14:51:58
+select * from art
+==========================================
+==========================================
+2017/07/12 14:51:58
+select * from art
+==========================================
+==========================================
+2017/07/12 14:51:58
+select * from cat
+==========================================
+==========================================
+2017/07/12 14:52:00
+select * from art
+==========================================
+==========================================
+2017/07/12 14:52:00
+select * from art
+==========================================
+==========================================
+2017/07/12 14:52:00
+select * from cat
+==========================================
+==========================================
+2017/07/12 14:53:29
+select * from art
+==========================================
+==========================================
+2017/07/12 14:53:29
+select * from art
+==========================================
+==========================================
+2017/07/12 14:53:29
+select * from cat
+==========================================
+==========================================
+2017/07/12 14:53:33
+select * from art
+==========================================
+==========================================
+2017/07/12 14:53:33
+select * from art
+==========================================
+==========================================
+2017/07/12 14:53:33
+select * from cat
+==========================================
+==========================================
+2017/07/12 14:53:35
+select * from art
+==========================================
+==========================================
+2017/07/12 14:53:35
+select * from art
+==========================================
+==========================================
+2017/07/12 14:53:35
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:50
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:50
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:51
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:51
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:52
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:53
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:54
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:54
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:54
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:54
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:54
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=
+==========================================
+==========================================
+2017/07/12 15:01:54
+select * from comment where art_id = 
+==========================================
+==========================================
+2017/07/12 15:01:58
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:01:58
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:02:34
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:02:34
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:02:38
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/12 15:02:38
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/12 15:02:38
+select * from comment where art_id = 2
+==========================================
+==========================================
+2017/07/12 15:02:45
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:02:45
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:02:46
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:02:46
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:02:47
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:02:47
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:02:48
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:02:48
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 3
+==========================================
+==========================================
+2017/07/12 15:02:48
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:02:48
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:03:04
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:04
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:03:16
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:16
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:03:21
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:21
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:03:21
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:21
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:03:22
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:22
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 3
+==========================================
+==========================================
+2017/07/12 15:03:22
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:22
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:03:30
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:03:30
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:04:02
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:02
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:04:22
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:22
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:04:32
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:32
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:04:44
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:44
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:04:47
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:47
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:04:54
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:54
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:04:57
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:04:57
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:05:08
+select * from art where art_id = 2
+==========================================
+==========================================
+2017/07/12 15:05:08
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where art.art_id=2
+==========================================
+==========================================
+2017/07/12 15:05:08
+select * from comment where art_id = 2
+==========================================
+==========================================
+2017/07/12 15:05:14
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:05:14
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:05:19
+select * from art
+==========================================
+==========================================
+2017/07/12 15:05:19
+select * from art
+==========================================
+==========================================
+2017/07/12 15:05:19
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:05:21
+select * from art
+==========================================
+==========================================
+2017/07/12 15:05:21
+select * from art
+==========================================
+==========================================
+2017/07/12 15:05:21
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:05:23
+select * from art
+==========================================
+==========================================
+2017/07/12 15:05:23
+select * from art
+==========================================
+==========================================
+2017/07/12 15:05:23
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:10:35
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:10:35
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:11:37
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:11:37
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:11:44
+select * from art
+==========================================
+==========================================
+2017/07/12 15:11:44
+select * from art
+==========================================
+==========================================
+2017/07/12 15:11:44
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:33
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:33
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:12:35
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:35
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:12:39
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:39
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:12:44
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:44
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:12:47
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:47
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:12:52
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:12:55
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:55
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:12:58
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:12:58
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:13:01
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:01
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:13:13
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:13
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:13:16
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:16
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:13:19
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:19
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:13:21
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:21
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:13:29
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:29
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:13:33
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:33
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:13:36
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:36
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:13:59
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:13:59
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:14:01
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:14:01
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:14:15
+select * from art
+==========================================
+==========================================
+2017/07/12 15:14:15
+select * from art
+==========================================
+==========================================
+2017/07/12 15:14:15
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:14:18
+select * from art
+==========================================
+==========================================
+2017/07/12 15:14:18
+select * from art
+==========================================
+==========================================
+2017/07/12 15:14:18
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:37:22
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:37:22
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:37:55
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:37:55
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:38:25
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:38:25
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:38:53
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:38:53
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:01
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:01
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:13
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:13
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:24
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:24
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:29
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:29
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:31
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:31
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:39:36
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:36
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 3
+==========================================
+==========================================
+2017/07/12 15:39:37
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:37
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:44
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:44
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 3
+==========================================
+==========================================
+2017/07/12 15:39:44
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:44
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:39:46
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:46
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:39:48
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:39:48
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:45:41
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:41
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:45:42
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:42
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:45:44
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:44
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:45:49
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:49
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:45:52
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:52
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:45:55
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:55
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:45:58
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:45:58
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:46:00
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:46:00
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:47:36
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:47:36
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:47:40
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:47:40
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:47:45
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:47:45
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:47:47
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:47:47
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 15:54:04
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:54:04
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 15:54:05
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:54:05
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 3
+==========================================
+==========================================
+2017/07/12 15:54:05
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:54:05
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1
+==========================================
+==========================================
+2017/07/12 15:54:07
+select * from cat
+==========================================
+==========================================
+2017/07/12 15:54:07
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 16:07:00
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:00
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 16:07:05
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:05
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================
+==========================================
+2017/07/12 16:07:07
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:07
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:07:11
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:11
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:07:15
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:15
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:07:18
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:18
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:07:24
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:07:24
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:09:07
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:09:07
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:09:17
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:09:17
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:09:22
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:09:22
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:09:24
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:09:24
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:09:27
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:09:27
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 2
+==========================================
+==========================================
+2017/07/12 16:09:30
+select * from cat
+==========================================
+==========================================
+2017/07/12 16:09:30
+select title,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1 and art.cat_id = 1
+==========================================

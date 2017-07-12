@@ -17,7 +17,7 @@ foreach ($rs_cat as $k => $v) {
 /*page all data arr*/
 $pArr = getPage($rs,5);
 $pDisArr = $pArr[$_GET['page']];
-var_dump($pDisArr);
+/*var_dump($pDisArr);*/
 
 
 
