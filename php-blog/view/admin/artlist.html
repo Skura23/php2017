@@ -18,21 +18,36 @@
 			</tr>
 		</thead>
 		<tbody>
-		<?php foreach($rs as $k=>$v){
-			echo '<tr>';
-			echo '<td>'.$v['art_id'].'</td>';
-			echo '<td>'.gmdate('Y/m/d',$v['pubtime']).'</td>';
-			echo '<td>'.$v['title'].'</td>';
-			echo '<td>'.$catname[$v['cat_id']].'</td>';
-			echo '<td>'.$v['comm'].'</td>';
-			echo '<td>';
-			echo '<a href="artedit.php?art_id='.$v['art_id'].'">编辑</a>';
-			echo '<a class="del" href="artdel.php?art_id='.$v['art_id'].'">删除</a>';
-			echo '</tr>';
-		}?>
+		<?php foreach($pDisArr as $k=>$v){ ?>
+			<!-- echo '<tr>';
+      echo '<td>'.$v['art_id'].'</td>';
+      echo '<td>'.gmdate('Y/m/d',$v['pubtime']).'</td>';
+      echo '<td>'.$v['title'].'</td>';
+      echo '<td>'.$catname[$v['cat_id']].'</td>';
+      echo '<td>'.$v['comm'].'</td>';
+      echo '<td>';
+      echo '<a href="artedit.php?art_id='.$v['art_id'].'">编辑</a>';
+      echo '<a class="del" href="artdel.php?art_id='.$v['art_id'].'">删除</a>';
+      echo '</tr>'; -->
+      
+      <tr>
+        <td><?php echo $v['art_id']; ?></td>
+        <td><?php echo gmdate('Y/m/d',$v['pubtime']); ?></td>
+        <td><?php echo $v['title']; ?></td>
+        <td><?php echo $catname[$v['cat_id']]; ?></td>
+        <td><?php echo $v['comm']; ?></td>
+        <td><?php echo '<a href="artedit.php?art_id='.$v['art_id'].'">编辑</a>';
+        echo'<a class="del" href="artdel.php?art_id='.$v['art_id'].'">删除</a>'; ?></td>
+      </tr>
+		<?php } ?>
 		</tbody>
-		
 	</table>
+  <?php foreach($pArr as $k=>$v){
+      if($_GET['page'] == $k){ ?>
+        <span><?php echo $k; ?></span>
+        <?php }else{ ?>
+    <a href="artlist.php?page=<?php echo $k; ?>"><?php echo $k; ?></a>
+  <?php } } ?>
 <script>
 var del = document.getElementsByClassName('del');
 for(var i =0;i<del.length;i++){
