@@ -25,6 +25,17 @@ if (empty($_POST)) {
 
 	/*var_dump(mExec('art', $art));*/
 	
+	//print_r($_FILES);exit();
+	//判断是否有图片上传且error是否为0 
+	if ( !empty($_FILES['pic']['name']) && $_FILES['pic']['error'] == 0) {
+		# code...
+		$filename =  createDir() . '/' . randStr().getExt($_FILES['pic']['name']);
+		if(move_uploaded_file($_FILES['pic']['tmp_name'], ROOT.$filename)){
+			$art['pic'] = $filename;
+			echo $art['pic'];
+		}
+	}
+
 	if (!mExec('art', $art)) {
 		# code...
 		error('文章插入失败');

@@ -33,8 +33,8 @@ if (!empty($_POST)) {
 	$rs=mExec('comment',$comm);
 	if ($rs) {
 		//评论数+1
-		/*$sql = "update art set comm = comm+1 where art_id = $art_id";
-		mQuery($sql);*/
+		$sql = "update art set comm = comm+1 where art_id = $art_id";
+		mQuery($sql);
 		# code...
 		$ref = $_SERVER['HTTP_REFERER'];
 		header("Location: $ref");

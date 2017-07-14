@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax</title>
+</head>
+<body>
+<div>
+  <p id="dis"></p>
+  <input type="text" id="numInp">
+  <button onclick="foo()">查询</button>
+
+  <label><input type="text" id="name"></label>
+  <label><input type="text" id="age"></label>
+  <button onclick="bar()">创建</button>
+</div>
+<script>
+  function foo(){
+    var request = new XMLHttpRequest();
+    var num = document.getElementById('numInp').value;
+    request.open('GET','ajaxtest.php?num='+num,true);
+    request.send();
+    request.onreadystatechange = function(){
+      if (request.readyState == 4) {
+        // do something
+        if (request.status == 200) {
+          document.getElementById('dis').innerHTML = request.responseText;
+        }else{
+          alert('发生错误 '+request.status);
+        }
+      }
+    }
+    console.log(request);
+  }
+
+  function bar(){
+    var request = new XMLHttpRequest();
+    request.open('POST','ajaxtest.php?num='+num,true);
+    request.send();
+    request.onreadystatechange = function(){
+      if (request.readyState == 4) {
+        // do something
+        if (request.status == 200) {
+          document.getElementById('dis').innerHTML = request.responseText;
+        }else{
+          alert('发生错误 '+request.status);
+        }
+      }
+    }
+    console.log(request);
+  }
+</script>
+</body>
+</html>

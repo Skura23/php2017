@@ -26,8 +26,8 @@
 </head>
 <body>
 	<?php include 'public_side.html'; ?>
-	<div class="bo">
-	<form action="" method="post">
+	<div class="bo"> 
+	<form action="" method="post" enctype="multipart/form-data">
 		<section><span>标题：</span><input type="text" name="title"></section>
 		<section><span>栏目：</span><select name="cat_id" id="">
 			<?php foreach($rs as $k=>$v){
@@ -35,6 +35,7 @@
 			} ?>
 		</select></section>
 		<section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"></textarea></section>
+    <section><span class="c">图片：</span><input name="pic" type="file"></section>
 		<section><span>标签：</span><input type="text" name="tag"></section>
 		<button type="submit"> 提交 </button>
 	</form>

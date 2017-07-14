@@ -45,7 +45,7 @@ function getRealIp(){
 /**
 * 生成分页代码
 * @param int $arr 条目数组
-*	@param int $sNum 每页条目数
+* @param int $sNum 每页条目数
 * @return 键名为页码  值为当页条目数组 的数组
 */
 /*if (!isset($_GET['page'])) {
@@ -81,16 +81,41 @@ function getPage($arr,$sNum){
 $disArr = $pArr[$_GET['page']];
 echo $_GET['page'];*/
 
- ?>
+/**
+* 生成随机字符串
+* @param int $num 生成的字符数量
+* @return str  生成的字符串
+*/
 
-<!-- test html -->
-<!--  <body>
-	<ul>
-		<?php foreach ($disArr as $key => $value) { ?>
-		<li><?php echo $value ?></li>
-		<?php } ?>
-	</ul>
-	<?php foreach ($pArr as $key => $value) { ?>
-	<a href="func.php?page=<?php echo $key; ?>"><?php echo $key ?></a>
-	<?php } ?>
-</body> -->
+function randStr($num = 6){
+	$str = 'abcdefghijkmnpqrstuvwxyzABCDEFGHIJKMNPQRSTUVWXYZ23456789';
+	$str = str_shuffle($str);
+	return substr($str, 0, $num);
+}
+
+/**
+* 创建目录
+* 
+*/
+function createDir(){
+	$path = '/upload'.'/'.date('Y/m/d');
+	$fpath = ROOT . $path;
+	if (is_dir($fpath) || mkdir($fpath, 0777, true)) {
+		# code...
+		return $path;
+	}else{
+		return false;
+	}
+}
+
+/**
+* 获取文件后缀
+* @param str $filename 文件名
+* @return str 文件的后缀名, 且带点.
+*/
+function getExt($filename){
+	return strrchr($filename, '.');
+}
+
+?>
+

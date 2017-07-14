@@ -5,10 +5,9 @@ function mConn(){
 	static $conn = null;
 	if ($conn === null) {
 		# code...
-		$cfg = require("./lib/config.php");
-		$conn = mysql_connect($cfg['host'], $cfg['user'], $cfg['pwd']);
-		mysql_query('use '.$cfg['db'], $conn);
-		mysql_query('set names '.$cfg['charset'], $conn);
+		$cfg = require(ROOT."/lib/config.php");
+		$conn = mysqli_connect($cfg['host'], $cfg['user'], $cfg['pwd'], $cfg['db']);
+		mysqli_query($conn, 'set names '.$cfg['charset']);
 	}
 	return $conn;
 }
@@ -20,11 +19,11 @@ function mConn(){
 * @return mixed resource/bool
 */
 function mQuery($sql){
-	$rs = mysql_query($sql, mConn());
+	$rs = mysqli_query(mConn(),$sql);
 	if($rs){
 		mLog($sql);
 	}else{
-		mLog($sql, "\n", mysql_error());
+		mLog($sql, "\n", mysqli_error());
 	}
 	return $rs;
 }
@@ -51,7 +50,7 @@ function mGetAll($sql){
 	}
 
 	$data = array();
-	while($row = mysql_fetch_assoc($rs)){
+	while($row = mysqli_fetch_assoc($rs)){
 		$data[] = $row;
 	}
 	return $data;
@@ -72,7 +71,7 @@ function mGetRow($sql){
 	if (!$rs) {
 		return false;
 	}
-	return mysql_fetch_assoc($rs);
+	return mysqli_fetch_assoc($rs);
 }
 
 /**
@@ -85,7 +84,7 @@ function mGetOne($sql){
 	if (!$rs) {
 		return false;
 	}
-	return mysql_fetch_row($rs)[0];
+	return mysqli_fetch_row($rs)[0];
 }
 /*$sql = "select count(*) from cat where cat_id = 1";
 echo mGetOne($sql);*/
@@ -128,7 +127,7 @@ echo mExec('art', $data, 'update', 'art_id = 2');*/
 * 取得上一步insert操作产生的主键id
 */
 function getLastId(){
-	return mysql_insert_id(mConn());
+	return mysqli_insert_id(mConn());
 }
 
 
