@@ -1,6 +1,6 @@
 <?php 
 
-
+date_default_timezone_set("Asia/Shanghai");
 
 /**
 * 操作成功的提示信息
@@ -116,6 +116,15 @@ function createDir(){
 function getExt($filename){
 	return strrchr($filename, '.');
 }
+
+
+/**
+* 检测用户是否登录
+*/
+function checkCookie(){
+	return isset($_COOKIE['name']);
+}
+
 
 ?>
 

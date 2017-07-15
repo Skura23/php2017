@@ -23,7 +23,7 @@ function mQuery($sql){
 	if($rs){
 		mLog($sql);
 	}else{
-		mLog($sql, "\n", mysqli_error());
+		mLog($sql, "\n", mysqli_error($conn));
 	}
 	return $rs;
 }
@@ -130,6 +130,23 @@ function getLastId(){
 	return mysqli_insert_id(mConn());
 }
 
+/**
+* 使用反斜线 转义字符串
+* @param arr 待转义的数组
+* @return arr 转义后的数组
+*/
+function _addslashes($arr){
+	foreach ($arr as $key => $value) {
+		# code...
+		if (is_string($value)) {
+			$arr[$key] = addslashes($value);
+		}else if (is_array($value)) {
+			# code...
+			$arr[$key] = _addslashes($value);
+		}
+	}
+	return $arr;
+}
 
 
  ?>

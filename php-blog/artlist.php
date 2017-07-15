@@ -2,6 +2,10 @@
 
 require('./lib/init.php');
 
+if (!checkCookie()) {
+	# code...
+	header('Location: login.php');
+}
 
 $sql = "select * from art";
 mGetAll($sql);
