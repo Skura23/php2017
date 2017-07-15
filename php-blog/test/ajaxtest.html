@@ -3,24 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <title>ajax</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <div>
-  <p id="dis"></p>
+  <div id="dis"></div>
+  <p id="name"></p>
+  <p id="age"></p>
   <input type="text" id="numInp">
-  <button onclick="foo()">查询</button>
-
-  <label><input type="text" id="name"></label>
-  <label><input type="text" id="age"></label>
-  <button onclick="bar()">创建</button>
+  <button id="serachBtn">查询</button>
+  <br><br>
+  <label>姓名: <input type="text" id="nameInp"></label><br>
+  <label>年龄: <input type="text" id="ageInp"></label><br>
+  <button id="createBtn">创建</button>
 </div>
 <script>
-  function foo(){
+
+//jquery ajax方法
+$(function(){
+
+$('#serachBtn').click(function(event) {
+  /* Act on the event */
+  $.ajax({
+    type: 'GET',
+    url:"ajaxtest.php?num="+$('#numInp').val(),
+    dataType:"json",
+    //data为服务器返回值
+    success:function(data){
+      if (data.success) {
+        $("#name").html(data.msg);
+      }else{
+        $("#name").html('发生错误: '+data.msg);
+      }
+    },
+    error:function(jqXHR){
+      alert('发生错误: '+jqXHR.status)
+    }
+  })
+})
+
+$('#createBtn').click(function(event) {
+  /* Act on the event */
+  $.ajax({
+    type: 'POST',
+    url:"ajaxtest.php",
+    dataType:"json",
+    //data属性用来将前台数据传给后台post
+    data:{
+      name: $('#nameInp').val(),
+      age: $('#ageInp').val()
+    },
+    //data为服务器返回值
+    success:function(data){
+      if (data.success) {
+        $("#name").html(data.msg);
+      }else{
+        $("#name").html('发生错误: '+data.msg);
+      }
+    }
+  })
+})
+
+})
+  
+
+
+
+
+  //服务器返回值为json格式时
+  /*function foo(){
     var request = new XMLHttpRequest();
     var num = document.getElementById('numInp').value;
     request.open('GET','ajaxtest.php?num='+num,true);
     request.send();
     request.onreadystatechange = function(){
+      //第四阶段为响应完成阶段,对应函数为响应完成后执行的函数
+      if (request.readyState == 4) {
+        // do something
+        if (request.status == 200) {
+          var data = JSON.parse(request.responseText);
+          if (data.success) {
+            document.getElementById('dis').innerHTML =data.msg;
+          }else{
+            document.getElementById('dis').innerHTML ='出现错误: '+data.msg;
+          }
+        }else{
+          alert('发生错误 '+request.status);
+        }
+      }
+    }
+    console.log(request);
+  }
+
+  function bar(){
+    var request = new XMLHttpRequest();
+    var name = document.getElementById('nameInp').value;
+    var age = document.getElementById('ageInp').value;
+    request.open('POST','ajaxtest.php',true);
+    //post时直接将post字段传给send()方法提交
+    var data = 'name='+name+'&age='+age;
+    //post时要修改提交头部为如下形式
+    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+    request.send(data);
+    request.onreadystatechange = function(){
+      if (request.readyState == 4) {
+        // do something
+        if (request.status == 200) {
+          var data = JSON.parse(request.responseText);
+          if (data.success) {
+            document.getElementById('dis').innerHTML =data.msg;
+          }else{
+            document.getElementById('dis').innerHTML ='出现错误:'+data.msg;
+          }
+        }else{
+          alert('发生错误 '+request.status);
+        }
+      }
+    }
+    //console.log(request);
+  }*/
+
+
+
+
+  //服务器返回值为普通格式(text/plain)时
+  /*function foo(){
+    var request = new XMLHttpRequest();
+    var num = document.getElementById('numInp').value;
+    request.open('GET','ajaxtest.php?num='+num,true);
+    request.send();
+    request.onreadystatechange = function(){
+      //第四阶段为响应完成阶段,对应函数为响应完成后执行的函数
       if (request.readyState == 4) {
         // do something
         if (request.status == 200) {
@@ -35,8 +148,14 @@
 
   function bar(){
     var request = new XMLHttpRequest();
-    request.open('POST','ajaxtest.php?num='+num,true);
-    request.send();
+    var name = document.getElementById('nameInp').value;
+    var age = document.getElementById('ageInp').value;
+    request.open('POST','ajaxtest.php',true);
+    //post时直接将post字段传给send()方法提交
+    var data = 'name='+name+'&age='+age;
+    //post时要修改提交头部为如下形式
+    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+    request.send(data);
     request.onreadystatechange = function(){
       if (request.readyState == 4) {
         // do something
@@ -47,8 +166,8 @@
         }
       }
     }
-    console.log(request);
-  }
+    //console.log(request);
+  }*/
 </script>
 </body>
 </html>
