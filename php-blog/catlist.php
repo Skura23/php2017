@@ -17,7 +17,7 @@
 		$cat[] = $d;
 	}
 
-	print_r($cat);
+	/*print_r($cat);*/
 	require('./view/admin/catlist.html');
 
  ?>

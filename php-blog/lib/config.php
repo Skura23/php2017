@@ -5,7 +5,8 @@ return array(
 'user'=>'root',
 'pwd'=> '',
 'db' => 'blog',
-'charset' => 'utf8'
+'charset' => 'utf8',
+'salt' => 'lgsdg"+'
 	);
 
 

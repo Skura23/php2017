@@ -122,9 +122,22 @@ function getExt($filename){
 * 检测用户是否登录
 */
 function checkCookie(){
-	return isset($_COOKIE['name']);
+	if (!isset($_COOKIE['name']) || !isset($_COOKIE['ccode'])) {
+	 	# code...
+	 	return false;
+	} 
+	return $_COOKIE['ccode'] === cCode($_COOKIE['name']);
 }
 
+/**
+* 加密用户名
+* @param str $name 用户登录时输入的用户名
+* @return str md5(用户名+salt) => md5码
+*/
+function cCode($name){
+	$salt = require(ROOT . '/lib/config.php');
+	return md5($name . '|' . $salt['salt']); 
+}
 
 ?>
 
