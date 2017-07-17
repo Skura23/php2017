@@ -22,6 +22,16 @@
 	section input{
 		width: 229px;
 	}
+  #form-container{
+     width: 500px;
+  }
+  #editor-container{
+    height: 300px;
+    overflow-y: auto;
+  }
+  .ql-toolbar{
+    width: 500px;
+  }
 	</style>
 </head>
 <body>
@@ -33,12 +43,44 @@
 			<?php foreach($rs as $k=>$v){
 				echo '<option value="'.$v['cat_id'].'">'.$v['catname'].'</option>';
 			} ?>
-		</select></section>
-		<section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"></textarea></section>
+		</select></section><br>
+    <div id="form-container">
+      <div id="editor-container"></div>
+    </div>
+		<!-- <section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"></textarea></section> -->
     <section><span class="c">图片：</span><input name="pic" type="file"></section>
 		<section><span>标签：</span><input type="text" name="tag"></section>
 		<button type="submit"> 提交 </button>
 	</form>
 	</div>
 </body>
+<script>
+var toolbarOptions = 
+  [
+    ['bold', 'italic'],
+    ['link', 'blockquote', 'code-block', 'image'],
+    [{ list: 'ordered' }, { list: 'bullet' }],
+  ];
+
+
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: toolbarOptions
+
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow'
+});
+
+var toolbar = quill.getModule('toolbar');
+toolbar.addHandler('link', function(value) {
+      if (value) {
+        var href = prompt('Enter the URL');
+        this.quill.format('link', href);
+      } else {
+        this.quill.format('link', false);
+      }
+    });
+
+</script>
 </html>
