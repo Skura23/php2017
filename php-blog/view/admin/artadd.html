@@ -23,14 +23,14 @@
 		width: 229px;
 	}
   #form-container{
-     width: 500px;
+     width: 650px;
   }
   #editor-container{
     height: 300px;
     overflow-y: auto;
   }
   .ql-toolbar{
-    width: 500px;
+    width: 650px;
   }
 	</style>
 </head>
@@ -43,13 +43,14 @@
 			<?php foreach($rs as $k=>$v){
 				echo '<option value="'.$v['cat_id'].'">'.$v['catname'].'</option>';
 			} ?>
-		</select></section><br>
+		</select></section>
+    <section style="margin-bottom: 15px">内容 :</section>
     <div id="form-container">
       <input name="content" type="hidden">
       <div id="editor-container"></div>
     </div>
 		<!-- <section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"></textarea></section> -->
-    <section><span class="c">图片：</span><input name="pic" type="file"></section>
+    <!-- <section><span class="c">图片：</span><input name="pic" type="file"></section> -->
 		<section><span>标签：</span><input type="text" name="tag"></section>
 		<button type="submit"> 提交 </button>
 	</form>
@@ -61,9 +62,9 @@
 <script>
 var toolbarOptions = 
   [
-    ['bold', 'italic'],
+    ['bold', 'italic', 'strike'],[{ 'size': ['small', false, 'large', 'huge'] }],  
     ['link', 'blockquote', 'code-block', 'image'],
-    [{ list: 'ordered' }, { list: 'bullet' }],
+    [{ list: 'ordered' }, { list: 'bullet' }],[{ 'align': [] }]
   ];
 
 
@@ -133,12 +134,16 @@ function upImg(event) {
   $('#artForm')[0].onsubmit = function() {
     // Populate hidden form on submit
     var content = document.querySelector('input[name=content]');
-    content.value = JSON.stringify(quill.getContents());
-    
+    content.value = quill.root.innerHTML;
+    //获取各种类型编辑器内容的方法
+    //var delta = quill.getContents();
+    //var text = quill.getText();
+    //var justHtml = quill.root.innerHTML;
+    console.log(quill.root.innerHTML);
     //console.log("Submitted", $(form).serialize(), $(form).serializeArray());
     
     // No back end to actually submit to!
-    //alert('Open the console to see the submit data!')
+    alert('Open the console to see the submit data!')
     //return false;
   };
 

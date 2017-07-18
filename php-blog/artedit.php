@@ -20,7 +20,7 @@ if (empty($_POST)) {
 	$cats = mGetAll($sql_cat);
 
 	$rs = mGetRow($sql_art);
-	var_dump($rs);
+	//var_dump($rs);
 	require(ROOT.'/view/admin/artedit.html');
 }else{
 	$modidArt = array();

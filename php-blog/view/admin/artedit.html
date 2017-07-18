@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>编辑文章</title>
+	<title>修改文章</title>
 	<style>
 	section{
 		display: block;
@@ -22,22 +22,135 @@
 	section input{
 		width: 229px;
 	}
+  #form-container{
+     width: 650px;
+  }
+  #editor-container{
+    height: 300px;
+    overflow-y: auto;
+  }
+  .ql-toolbar{
+    width: 650px;
+  }
 	</style>
 </head>
 <body>
 	<?php include 'public_side.html'; ?>
-	<div class="bo">
-	<form action="" method="post">
+	<div class="bo"> 
+	<form action="" method="post" enctype="multipart/form-data" id="artForm">
 		<section><span>标题：</span><input type="text" name="title" value="<?php echo $rs['title'] ?>"></section>
 		<section><span>栏目：</span><select name="cat_id" id="">
-			<?php foreach($cats as $k=>$v){
-				echo '<option value="'.$v['cat_id'].'" '.($v['cat_id']===$rs['cat_id']? "selected='selected'" : '').'>'.$v['catname'].'</option>';
-			} ?>
-		</select></section>
-		<section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"><?php echo $rs['content'] ?></textarea></section>
+      <?php foreach($cats as $k=>$v){
+        echo '<option value="'.$v['cat_id'].'" '.($v['cat_id']===$rs['cat_id']? "selected='selected'" : '').'>'.$v['catname'].'</option>';
+      } ?>
+    </select></section>
+    <section style="margin-bottom: 15px">内容 :</section>
+    <div id="form-container">
+      <input name="content" type="hidden">
+      <div id="editor-container"></div>
+    </div>
+		<!-- <section><span class="c">内容：</span><textarea name="content" id="" cols="30" rows="5"></textarea></section> -->
+    <!-- <section><span class="c">图片：</span><input name="pic" type="file"></section> -->
 		<section><span>标签：</span><input type="text" name="tag" value="<?php echo $rs['arttag'] ?>"></section>
 		<button type="submit"> 提交 </button>
 	</form>
+  <form enctype="multipart/form-data" id="imgForm">
+    <input type="file" style="display:none" id="imgInp" onchange="upImg()">
+  </form>
+  <div id="cont-container" style="display: none;"><?php echo $rs['content']; ?></div>
 	</div>
 </body>
+<script>
+var toolbarOptions = 
+  [
+    ['bold', 'italic', 'strike'],[{ 'size': ['small', false, 'large', 'huge'] }],  
+    ['link', 'blockquote', 'code-block', 'image'],
+    [{ list: 'ordered' }, { list: 'bullet' }],[{ 'align': [] }]
+  ];
+
+
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: {
+      container: toolbarOptions,
+      handlers: {
+        image: imageHandler
+      }
+    }
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow'
+});
+
+var toolbar = quill.getModule('toolbar');
+toolbar.addHandler('link', function(value) {
+  if (value) {
+    var href = prompt('Enter the URL');
+    this.quill.format('link', href);
+  } else {
+    this.quill.format('link', false);
+  }
+});
+
+/*$('.ql-image').click(function(event) {
+  event.preventDefault();
+});*/
+
+var flag = true;
+function imageHandler(value){
+  if (flag) {
+    $('#imgInp')[0].click();
+  }else{
+    var range = this.quill.getSelection();
+    //var value = prompt('What is the image URL');
+    console.log(value);
+    this.quill.insertEmbed(range.index, 'image', value, Quill.sources.USER);
+    flag = true;
+  }
+}
+
+function upImg(event) {
+    var formData = new FormData($('#imgForm')[0]);
+    formData.append('file',$('#imgInp')[0].files[0]);
+    //console.log($('#imgInp')[0].files[0])
+    //坑点. console.log(formData)会显示为空,但其实值是存在的,f12查看Net tab可以看到数据被上传了
+    //var path = '';
+    $.ajax({
+      url:'imgHandler.php',
+      type: 'POST',
+      data: formData,
+      //这两个设置项必填
+      contentType: false,
+      processData: false,
+      success:function(data){
+        //console.log(data)
+        //flag位置待考虑
+        flag = false;
+        imageHandler(data)
+      }
+    })
+    //return path;
+  };
+
+  $('#artForm')[0].onsubmit = function() {
+    // Populate hidden form on submit
+    var content = document.querySelector('input[name=content]');
+    content.value = quill.root.innerHTML;
+    //获取各种类型编辑器内容的方法
+    //var delta = quill.getContents();
+    //var text = quill.getText();
+    //var justHtml = quill.root.innerHTML;
+    console.log(quill.root.innerHTML);
+    //console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+    
+    // No back end to actually submit to!
+    alert('Open the console to see the submit data!')
+    //return false;
+  };
+
+  console.log($('#cont-container'));
+quill.root.innerHTML = $('#cont-container').html();
+
+
+</script>
 </html>
