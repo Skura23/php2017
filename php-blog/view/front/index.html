@@ -55,7 +55,7 @@
 						<p><?php echo $v['content']; ?></p>
 						<div class="article-list-footer">
 							<span class="article-list-date">
-								<?php echo $v['pubtime']; ?>
+								<?php echo date('Y-m-d',$v['pubtime']); ?>
 							</span>
 							<!-- <span class="article-list-divider">-</span>
 							<span class="article-list-minutes">
@@ -75,17 +75,11 @@
 				<?php } ?>
 				</ul>
 				<?php foreach($pArr as $k=>$v){
-				    if($_GET['page'] == $k){ ?>
-				      <span><?php echo $k; ?></span>
-				      <?php }else{ ?>
-				  <a href="index.php?
-				  <?php
-				  	$_GET['page'] = $k;
-				  	$str = http_build_query($_GET);
-				  	echo $str;
-				   ?>
-				  "><?php echo $k; ?></a>
-				<?php } } ?>
+			      if($_GET['page'] == $k){ ?>
+			        <span><?php echo $k; ?></span>
+			        <?php }else{ ?>
+			    <a href="index.php?page=<?php echo $k; ?>"><?php echo $k; ?></a>
+			  <?php } } ?>
 				<footer class="footer appear">
 					<p>
 						PajamaCat的个人博客

@@ -11,6 +11,8 @@
 	<script src="./assets/quill/quill.min.js"></script>
 	<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<style>
 		.article-list-cat{
 			font-size: 14px;
@@ -56,8 +58,10 @@
 							</div>
 						</div>
 					</header>
+					<div class="ql-snow">
 					<div class="article-content ql-editor">
 						<?php echo $art['content']; ?>
+					</div>
 					</div>
 					</article>
 					<div class="comments">

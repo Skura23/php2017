@@ -98,7 +98,7 @@ function randStr($num = 6){
 * 
 */
 function createDir(){
-	$path = '/upload'.'/'.date('Y/m/d');
+	$path = '/upload'.'/'.date('Ymd');
 	$fpath = ROOT . $path;
 	if (is_dir($fpath) || mkdir($fpath, 0777, true)) {
 		# code...
@@ -107,6 +107,7 @@ function createDir(){
 		return false;
 	}
 }
+
 
 /**
 * 获取文件后缀

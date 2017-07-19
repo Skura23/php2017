@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>修改文章</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	<style>
 	section{
 		display: block;
@@ -61,6 +63,11 @@
 	</div>
 </body>
 <script>
+//添加语法高亮效果
+hljs.configure({   // optionally configure hljs
+  languages: ['javascript', 'ruby', 'python']
+});
+
 var toolbarOptions = 
   [
     ['bold', 'italic', 'strike'],[{ 'size': ['small', false, 'large', 'huge'] }],  
@@ -71,6 +78,7 @@ var toolbarOptions =
 
 var quill = new Quill('#editor-container', {
   modules: {
+    syntax: true,
     toolbar: {
       container: toolbarOptions,
       handlers: {
