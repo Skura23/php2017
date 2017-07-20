@@ -10,6 +10,7 @@ if (empty($_POST)) {
 }else{
 	//检测标题是否为空
 	$art['title'] = trim($_POST['title']);
+	$art['subtitle'] = trim($_POST['subtitle']);
 	$art['content'] = trim($_POST['content']);
 	$art['cat_id'] = trim($_POST['cat_id']);
 	$art['pubtime'] = time();

@@ -10,7 +10,7 @@ if (!is_numeric($art_id)) {
 }
 
 //判断是否有这篇文章
-$sql_art = "select title,content,cat_id,arttag from art where art_id = $art_id";
+$sql_art = "select title,subtitle,content,cat_id,arttag from art where art_id = $art_id";
 if(!mGetRow($sql_art)){
 	error('文章不存在');
 }
@@ -25,6 +25,7 @@ if (empty($_POST)) {
 }else{
 	$modidArt = array();
 	$modidArt['title'] = trim($_POST['title']);
+	$modidArt['subtitle'] = trim($_POST['subtitle']);
 	$modidArt['content'] = trim($_POST['content']);
 	$modidArt['cat_id'] = trim($_POST['cat_id']);
 	if (empty($modidArt['title'])) {

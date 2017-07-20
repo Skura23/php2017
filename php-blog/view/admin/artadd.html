@@ -38,7 +38,8 @@
 	<?php include 'public_side.html'; ?>
 	<div class="bo"> 
 	<form action="" method="post" enctype="multipart/form-data" id="artForm">
-		<section><span>标题：</span><input type="text" name="title"></section>
+    <section><span>标题：</span><input type="text" name="title"></section>
+		<section><span>摘要：</span><input type="text" name="subtitle"></section>
 		<section><span>栏目：</span><select name="cat_id" id="">
 			<?php foreach($rs as $k=>$v){
 				echo '<option value="'.$v['cat_id'].'">'.$v['catname'].'</option>';
@@ -144,7 +145,7 @@ function upImg(event) {
     //console.log("Submitted", $(form).serialize(), $(form).serializeArray());
     
     // No back end to actually submit to!
-    alert('Open the console to see the submit data!')
+    //alert('Open the console to see the submit data!')
     //return false;
   };
 

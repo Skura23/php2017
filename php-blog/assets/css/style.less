@@ -40,6 +40,9 @@
 .mt1{
   margin-top: 20px;
 }
+.mt2{
+  margin-top: 10px;
+}
 /* bigger text */
 .bt{
   font-size:20px;
@@ -51,12 +54,19 @@ ul,li{
   margin: 0;
   padding:0;
 }
+textarea{
 
+}
 
 @dis : 90px;
+@bo : 1px solid #ebeaea;
 
 /* blog additional style */
 
+.page{
+	font-size: 13px;
+	margin-bottom: 10px;
+}
 .ion-social-wordpress:before {
     vertical-align: -1px;
     font-size: 19px;
@@ -67,9 +77,70 @@ ul,li{
 .cat{
   width: 150px;
 	left: -150px;
-	top: 155px;
+	top: 180px;
   li{
     padding-right: 25px;
     text-align: right;
   }
+}
+.article{
+	margin: 40px 0;
+	.sub-t{
+		
+	}
+}
+.article .ql-editor{
+	padding: 0;
+}
+.article-header{
+	border: none;
+	margin-bottom: 0;
+	padding-bottom:10px;
+}
+.article-list-footer{
+	padding-bottom: 30px;
+	//border-bottom: @bo;
+}
+.comments{
+	margin-bottom: 30px;
+	&:not(h4){
+		font-size: 15px;
+	}
+	i{
+		font-size: 13px;
+	}
+	.comment{
+		margin-bottom: 20px;
+	}
+}
+.user{
+	margin-bottom: 30px;
+	.notice{
+		display: none;
+	}
+	input,textarea{
+		padding: 5px;
+		outline: medium;
+		&:focus{
+			border: 2px solid #000;
+		}
+	}
+
+	textarea{
+		width: 450px;
+		height: 70px;
+	}
+	button{
+		background: none;
+		border: none;
+		border: 2px solid #000;
+		cursor: pointer;
+		padding: 5px;
+		transition: 0.15s;
+		outline: medium;
+		&:hover{
+			color: #fff;
+			background: #000;
+		}
+	}
 }

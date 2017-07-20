@@ -20,11 +20,11 @@ function mConn(){
 */
 function mQuery($sql){
 	$rs = mysqli_query(mConn(),$sql);
-	if($rs){
+	/*if($rs){
 		mLog($sql);
 	}else{
 		mLog($sql, "\n", mysqli_error($conn));
-	}
+	}*/
 	return $rs;
 }
 

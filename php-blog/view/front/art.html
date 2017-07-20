@@ -25,7 +25,7 @@
 		<div class="grid grid-centered">
 			<div class="grid-cell">
 				<nav class="header-nav appear">
-					<a href="/" class="header-logo" title="Chalk">PajamaCat's Blog</a>
+					<a href="index.php" class="header-logo" title="Chalk">PajamaCat's Blog</a>
 					<ul class="header-links">
 						<li>
 							<a href="https://github.com/Skura23" rel="noreferrer noopener" target="_blank" title="GitHub">
@@ -41,22 +41,9 @@
 				</nav>
 				<article class="article appear">
 					<header class="article-header">
-						<h1><?php echo $art['title']; ?></h1>
-						<p>Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.</p>
-						<div class="article-list-footer">
-							<span class="article-list-date">
-								<?php echo gmdate('Y/m/d',$art['pubtime']); ?>
-							</span>
-							<span class="article-list-divider">-</span>
-							<div class="article-list-tags">
-								<a href="/tag/web">web</a>
-								<a href="/tag/jekyll">jekyll</a>
-							</div>
-							<span class="article-list-divider">-</span>
-							<div class="article-list-tags article-list-cat">
-								∈ <?php echo $art['catname']; ?>
-							</div>
-						</div>
+						<h1><?php echo $art['title']; ?></h1><br>
+            <div class="sub-t mt1">摘要: &nbsp;<?php echo $art['subtitle']; ?></div><br>
+						
 					</header>
 					<div class="ql-snow">
 					<div class="article-content ql-editor">
@@ -64,28 +51,48 @@
 					</div>
 					</div>
 					</article>
+
+          <div class="article-list-footer">
+            <span class="article-list-date" title="<?php echo date('Y-m-d H:i:s',$art['pubtime']); ?>">
+              <?php echo gmdate('Y/m/d',$art['pubtime']); ?>
+            </span>
+            <span class="article-list-divider">-</span>
+            <div class="article-list-tags">
+              <a href="/tag/web">web</a>
+              <a href="/tag/jekyll">jekyll</a>
+            </div>
+            <span class="article-list-divider">-</span>
+            <div class="article-list-tags article-list-cat">
+              ∈ <?php echo $art['catname']; ?>
+            </div>
+          </div>
+          <br>
+          <br>
+
 					<div class="comments">
-							<h2>评论</h2>
+							<h2>评论:</h2><br><br>
 					<?php foreach($comms as $k=>$v){ ?>
 						<div class="comment">
-							<h3><?php echo $v['nick']; ?></h3>
-							<p class="com-time"><?php echo date('Y/m/d H:i',$v['pubtime']); ?></p>
-							<div><?php echo $v['content']; ?></div>
+							<h4><?php echo $v['nick']; ?>&nbsp;&nbsp;&nbsp;<i><?php echo date('Y/m/d H:i',$v['pubtime']); ?></i></h4>
+							<p class="com-time"></p>
+							<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $v['content']; ?></div>
 						</div>
 					<?php } ?>
 					</div>
+          <br>
 					<div class="user">
 					<form action="" method="post">
-						<h2>我要留言</h2>
+						<h4><b>我要留言:</b></h4>
 						<!-- 留言失败时出现 -->
 						<?php if(isset($rs) && $rs==false){ ?>
 						<p>* 留言发布失败</p>
 						<?php } ?>
-						<p><label><input type="text" placeholder="输入昵称" name="nick"></label></p>
-						<p><label><input type="text" placeholder="输入邮箱" name="email"></label></p>
-						<p><label><textarea placeholder="输入评论" name="content"></textarea></label></p>
-						<p><button type="submit">提交</button></p>
+						<p class="mt1"><label><input type="text" placeholder="输入昵称" name="nick"></label><span class="notice">* 昵称格式错误</span></p>
+						<p class="mt1"><label><input type="text" placeholder="输入邮箱" name="email"></label><span class="notice">* 邮箱格式错误</span></p>
+						<p class="mt1"><label><textarea placeholder="输入评论" name="content"></textarea></label><span class="notice">* 评论不能为空</span></p>
+						<p class="mt1"><button type="submit">提交</button></p>
 					</form>
+          <br><br>
 					</div>
 					<footer class="footer appear">
 						<p>
@@ -105,5 +112,29 @@
 	<script src="./assets/js/webfonts.js"></script>
 	<script src="./assets/js/scrollappear.js"></script>
 	<script src="./assets/js/application.js"></script>
+
+<script>
+$(function(){
+  var $btn = $('button:submit');
+  var $user = $('.user');
+  $btn.click(function(event) {
+    $user.find('.notice').fadeOut('300');
+    /* Act on the event */
+    if (!/^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$/.test($user.find('input[name=nick]').val())) {
+      console.log($user.find('input[name=nick]'))
+      $user.find('input[name=nick]').parent().siblings('.notice').fadeIn(300);
+      return false
+    };
+    if (!/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test($user.find('input[name=email]').val())) {
+      $user.find('input[name=email]').parent().siblings('.notice').fadeIn(300);
+      return false
+    };
+    if ($user.find('textarea').text().length == 0 || $user.find('textarea').text().match(/^\s+$/g)) {
+      $user.find('input[name=content]').parent().siblings('.notice').fadeIn(300);
+      return false
+    };
+  });
+})
+</script>
 </body>
 </html>

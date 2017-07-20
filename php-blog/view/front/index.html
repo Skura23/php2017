@@ -24,8 +24,9 @@
 			
 			<div class="grid-cell">
 			<ul class="ab cat">
+      <li><a href="index.php">全部 (<?php echo $catSumNum; ?>)</a></li>
 			<?php foreach($cats as $k=>$v){ ?>
-				<li><a href="index.php?cat_id=<?php echo $v['cat_id']; ?>"><?php echo $v['catname']; ?></a></li>
+				<li><a href="index.php?cat_id=<?php echo $v['cat_id']; ?>"><?php echo $v['catname']." (".$v['num'].")"; ?></a></li>
 			<?php } ?>
 			</ul>	
 				<nav class="header-nav appear">
@@ -52,9 +53,9 @@
 								<span class="icon icon-arrow-right"></span>
 							</h5>
 						</a>
-						<p><?php echo $v['content']; ?></p>
-						<div class="article-list-footer">
-							<span class="article-list-date">
+            <div class="sub-t mt1">摘要: <?php echo $v['subtitle']; ?></div>
+						<div class="article-list-footer mt2">
+							<span class="article-list-date" title="<?php echo date('Y-m-d H:i:s',$v['pubtime']); ?>">
 								<?php echo date('Y-m-d',$v['pubtime']); ?>
 							</span>
 							<!-- <span class="article-list-divider">-</span>
@@ -74,12 +75,14 @@
 					</li>
 				<?php } ?>
 				</ul>
+        <p class="page">页码: &nbsp;
 				<?php foreach($pArr as $k=>$v){
 			      if($_GET['page'] == $k){ ?>
-			        <span><?php echo $k; ?></span>
+			        &nbsp;<span><?php echo $k; ?></span>
 			        <?php }else{ ?>
-			    <a href="index.php?page=<?php echo $k; ?>"><?php echo $k; ?></a>
+			    &nbsp;<a href="index.php?page=<?php echo $k; ?>"><?php echo $k; ?></a>
 			  <?php } } ?>
+        </p>
 				<footer class="footer appear">
 					<p>
 						PajamaCat的个人博客
