@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>my blog</title>
-	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<!-- <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="./assets/css/light.css">
 	<link rel="stylesheet/less" href="./assets/css/style.less">
 	<link rel="stylesheet" href="./assets/quill/quill.snow.css">
@@ -12,11 +12,23 @@
 	<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
+	<link rel="stylesheet" href="./assets/ionicons/ionicons.min.css">
+	<link rel="stylesheet" href="./assets/css/light.css">
+	<link rel="stylesheet" href="./assets/quill/quill.snow.css">
+	<link rel="stylesheet" href="./assets/highlight/dracula.css">
+	<link rel="stylesheet/less" href="./assets/css/style.less">
+	<script src="./assets/less.min.js"></script>
+	<script src="./assets/jquery-3.2.1.min.js"></script>
+	<script src="./assets/highlight/highlight.min.js"></script>
+	<script src="./assets/quill/quill.min.js"></script>
 	<style>
 		.article-list-cat{
 			font-size: 14px;
 			vertical-align: -1px;
+		}
+		.ql-snow .ql-editor pre.ql-syntax{
+			background: #282a36;
 		}
 	</style>
 </head>
@@ -74,8 +86,7 @@
 					<?php foreach($comms as $k=>$v){ ?>
 						<div class="comment">
 							<h4><?php echo $v['nick']; ?>&nbsp;&nbsp;&nbsp;<i><?php echo date('Y/m/d H:i',$v['pubtime']); ?></i></h4>
-							<p class="com-time"></p>
-							<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $v['content']; ?></div>
+							<div class="mt2"><?php echo $v['content']; ?></div>
 						</div>
 					<?php } ?>
 					</div>
@@ -118,7 +129,7 @@ $(function(){
   var $btn = $('button:submit');
   var $user = $('.user');
   $btn.click(function(event) {
-    $user.find('.notice').fadeOut('300');
+    $user.find('.notice').stop(true).fadeOut('300');
     /* Act on the event */
     if (!/^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$/.test($user.find('input[name=nick]').val())) {
       console.log($user.find('input[name=nick]'))
@@ -129,8 +140,8 @@ $(function(){
       $user.find('input[name=email]').parent().siblings('.notice').fadeIn(300);
       return false
     };
-    if ($user.find('textarea').text().length == 0 || $user.find('textarea').text().match(/^\s+$/g)) {
-      $user.find('input[name=content]').parent().siblings('.notice').fadeIn(300);
+    if ($user.find('textarea').val().length == 0 || $user.find('textarea').val().match(/^\s+$/g)) {
+      $user.find('textarea[name=content]').parent().siblings('.notice').fadeIn(300);
       return false
     };
   });

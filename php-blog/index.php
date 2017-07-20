@@ -15,7 +15,7 @@ if (isset($_GET['cat_id'])) {
 }
 
 //双表联查 
-$sql_art = "select title,subtitle,content,pubtime,comm,art_id,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1".$where;
+$sql_art = "select title,subtitle,content,pubtime,comm,art_id,arttag,cat.catname,cat.cat_id from art inner join cat on art.cat_id=cat.cat_id where 1".$where;
 
 $arts = mGetAll($sql_art);
 /*print_r($arts);*/

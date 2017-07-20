@@ -71,7 +71,8 @@ var toolbarOptions =
 
 
 var quill = new Quill('#editor-container', {
-  modules: {
+ modules: {
+    syntax: true,
     toolbar: {
       container: toolbarOptions,
       handlers: {

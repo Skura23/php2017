@@ -4,17 +4,24 @@
 <head>
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>my blog</title>
-	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="./assets/ionicons/ionicons.min.css">
 	<link rel="stylesheet" href="./assets/css/light.css">
-	<link rel="stylesheet/less" href="./assets/css/style.less">
 	<link rel="stylesheet" href="./assets/quill/quill.snow.css">
+	<link rel="stylesheet" href="./assets/highlight/dracula.css">
+	<link rel="stylesheet/less" href="./assets/css/style.less">
+	<script src="./assets/less.min.js"></script>
+	<script src="./assets/jquery-3.2.1.min.js"></script>
+	<script src="./assets/highlight/highlight.min.js"></script>
 	<script src="./assets/quill/quill.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
+
+
 	<style>
 		.article-list-cat{
 			font-size: 14px;
 			vertical-align: -1px;
+		}
+		.ql-snow .ql-editor pre.ql-syntax{
+			background: #282a36;
 		}
 	</style>
 </head>
@@ -62,11 +69,18 @@
 							<span class="article-list-minutes">
 								2 minute read
 							</span> -->
+							<?php if(!empty($v['arttag'])){ ?>
+							<?php 
+								$arr = explode( ',', $v['arttag']);
+								$str = implode(' &nbsp&nbsp;', $arr);
+							?>
 							<span class="article-list-divider">-</span>
 							<div class="article-list-tags">
-								<a href="/tag/design">design</a>
-								<a href="/tag/jekyll">jekyll</a>
+								<!-- <a href="/tag/design">design</a>
+								<a href="/tag/jekyll">jekyll</a> -->
+								<?php echo $str; ?>
 							</div>
+							<?php } ?>
 							<span class="article-list-divider">-</span>
 							<div class="article-list-tags article-list-cat">
 								∈ <?php echo $v['catname']; ?>
