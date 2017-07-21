@@ -81,15 +81,16 @@ textarea{
   li{
     padding-right: 25px;
     text-align: right;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 .article{
 	margin: 40px 0;
-	.sub-t{
-		
-	}
+	
 }
+.sub-t{
+		font-size: 15px;
+	}
 .article .ql-editor{
 	padding: 0;
 }
@@ -102,9 +103,6 @@ textarea{
 	padding-bottom: 30px;
 	//border-bottom: @bo;
 }
-.article-list-tags{
-	color: #ada8a8;
-}
 .comments{
 	margin-bottom: 30px;
 	&:not(h4){
@@ -115,20 +113,19 @@ textarea{
 	}
 	.comment{
 		margin-bottom: 20px;
-		.mt2{
-			padding-left: 20px;
-		}
 	}
 }
 .user{
 	margin-bottom: 30px;
 	.notice{
 		display: none;
+		font-size: 13px;
+		color: red;
 	}
 	input,textarea{
 		padding: 5px;
+		font-size: 13px;
 		outline: medium;
-		font-size: 12px;
 		&:focus{
 			border: 2px solid #000;
 		}
@@ -138,7 +135,7 @@ textarea{
 		width: 450px;
 		height: 70px;
 	}
-	button{
+	.sub-btn{
 		background: none;
 		border: none;
 		border: 2px solid #000;
@@ -149,6 +146,37 @@ textarea{
 		&:hover{
 			color: #fff;
 			background: #000;
+		}
+	}
+}
+.r-btns{
+	position: fixed;	
+	bottom: 50px;
+	right: 70px;
+	li{
+		margin-bottom: 20px;
+		text-align: center;
+		width: 35px;
+		height: 35px;
+		line-height: 40px;
+		//注意mixin须为	class或id, 若mixin有父元素,则要加上父元素
+		.user.sub-btn;
+		padding: 0;
+		span{
+			font-size: 24px;
+			vertical-align: 4px;
+			&:before{
+				transform: translateY(-5px);
+			}
+		}
+		>a{
+			display: block;
+			&:hover{
+			color: #fff;
+			background: #000;
+		}
+			width: 100%;
+			height: 100%;
 		}
 	}
 }

@@ -54,7 +54,7 @@
 				<article class="article appear">
 					<header class="article-header">
 						<h1><?php echo $art['title']; ?></h1><br>
-            <div class="sub-t mt1">摘要: &nbsp;<?php echo $art['subtitle']; ?></div><br>
+            <div class="sub-t mt1"><b>摘要:</b> &nbsp;<?php echo $art['subtitle']; ?></div><br>
 						
 					</header>
 					<div class="ql-snow">
@@ -68,11 +68,18 @@
             <span class="article-list-date" title="<?php echo date('Y-m-d H:i:s',$art['pubtime']); ?>">
               <?php echo gmdate('Y/m/d',$art['pubtime']); ?>
             </span>
+            <?php if(!empty($art['arttag'])){ ?>
+            <?php 
+              $arr = explode( ',', $art['arttag']);
+              $str = implode(' &nbsp&nbsp;', $arr);
+            ?>
             <span class="article-list-divider">-</span>
             <div class="article-list-tags">
-              <a href="/tag/web">web</a>
-              <a href="/tag/jekyll">jekyll</a>
+              <!-- <a href="/tag/design">design</a>
+              <a href="/tag/jekyll">jekyll</a> -->
+              <?php echo $str; ?>
             </div>
+            <?php } ?>
             <span class="article-list-divider">-</span>
             <div class="article-list-tags article-list-cat">
               ∈ <?php echo $art['catname']; ?>
@@ -98,10 +105,10 @@
 						<?php if(isset($rs) && $rs==false){ ?>
 						<p>* 留言发布失败</p>
 						<?php } ?>
-						<p class="mt1"><label><input type="text" placeholder="输入昵称" name="nick"></label><span class="notice">* 昵称格式错误</span></p>
-						<p class="mt1"><label><input type="text" placeholder="输入邮箱" name="email"></label><span class="notice">* 邮箱格式错误</span></p>
-						<p class="mt1"><label><textarea placeholder="输入评论" name="content"></textarea></label><span class="notice">* 评论不能为空</span></p>
-						<p class="mt1"><button type="submit">提交</button></p>
+						<p class="mt1"><label><input type="text" placeholder="输入昵称" name="nick"></label><span class="notice"> * 昵称格式错误</span></p>
+						<p class="mt1"><label><input type="text" placeholder="输入邮箱" name="email"></label><span class="notice"> * 邮箱格式错误</span></p>
+						<p class="mt1"><label><textarea placeholder="输入评论" name="content"></textarea></label><span class="notice"> * 评论不能为空</span></p>
+						<p class="mt1"><button type="submit" class="sub-btn">提交</button></p>
 					</form>
           <br><br>
 					</div>
@@ -113,6 +120,10 @@
 				</div>
 			</div>
 		</main>
+    <ul class="r-btns">
+      <li><a href="index.php"><span class="ion-home"></span></a></li>
+      <li id="goUpBtn"><span class="ion-android-arrow-up " ></span></li>
+    </ul>
 		<script>
 		//chalk template
 		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
@@ -128,6 +139,8 @@
 $(function(){
   var $btn = $('button:submit');
   var $user = $('.user');
+
+  //评论提交验证
   $btn.click(function(event) {
     $user.find('.notice').stop(true).fadeOut('300');
     /* Act on the event */
@@ -144,6 +157,17 @@ $(function(){
       $user.find('textarea[name=content]').parent().siblings('.notice').fadeIn(300);
       return false
     };
+  })
+
+  //右边回顶部, 主页按钮
+  $('#goUpBtn').click(function(event) {
+    /* Act on the event */
+    var sTop = $('body')[0].scrollTop;
+    if( sTop>=0 && sTop<100){
+        $('html,body').stop(true).animate({scrollTop: '0px'}, 10);
+    }else{
+      $('html,body').stop(true).animate({scrollTop: '0px'}, 300);
+    }
   });
 })
 </script>
