@@ -1,7 +1,9 @@
 <?php 
 
+require('./lib/init.php');
+
 $cat_id = $_GET['cat_id'];
-	var_dump($cat_id);
+//var_dump($cat_id);
 
 
 /*if(!is_numeric($cat_id)){
@@ -9,17 +11,14 @@ $cat_id = $_GET['cat_id'];
 	exit();
 }*/
 
-$conn = mysql_connect('localhost','root','');
-mysql_query('use blog',$conn);
-mysql_query('set names utf8');
+$conn = mConn();
 
 
 
 if (empty($_POST)) {
 	# code...
 	$sql = "select * from cat where cat_id = $cat_id";
-	$rs = mysql_query($sql);
-	$row = mysql_fetch_assoc($rs);
+	$row = mGetRow($sql);
 	require('./view/admin/catedit.html');
 }else{
 	$postName = trim($_POST['catname']);

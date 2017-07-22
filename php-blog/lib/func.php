@@ -7,7 +7,7 @@ date_default_timezone_set("Asia/Shanghai");
 */
 function succ($res = '成功'){
 	$result = 'succ';
-	require (ROOT.'\view\admin\info.html');
+	require (ROOT.'/view/admin/info.html');
 	exit();
 }
 
@@ -17,7 +17,7 @@ function succ($res = '成功'){
 */
 function error($res = '失败'){
 	$result = 'fail';
-	require (ROOT.'\view/admin/info.html');
+	require (ROOT.'/view/admin/info.html');
 	exit();
 }
 
