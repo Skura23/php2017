@@ -6,4 +6,4 @@ This is a directory of my php learning codes
 Specially the <b>\<php-blog\></b> directory contains my blog's source codes,
 you can visit my blog here:
 
-<a>http://www.skura23.cc/php2017/php-blog/</a>
+<a>http://www.pajamacat.xin/php2017/php-blog/</a>
